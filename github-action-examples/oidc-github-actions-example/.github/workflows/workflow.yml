@@ -19,13 +19,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup JFrog CLI
-        uses: jfrog/setup-jfrog-cli@v4
+        uses: jfrog/setup-jfrog-cli@v3
         env:
-          # JFrog platform url (for example: https://acme.jfrog.io)
-          JF_URL: ${{ vars.JF_URL }}
+          JF_URL: https://teradataio.jfrog.io
         with:
-          # Name of the OIDC provider as specified on the OIDC integration page in the JFrog Platform
-          oidc-provider-name: setup-jfrog-cli
+          oidc-provider-name: github-jfrog 
+          oidc-audience: my-aud
 
       - name: Run JFrog CLI
         run: |
