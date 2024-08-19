@@ -6,7 +6,6 @@ on:
       - dev
       - feature/**
       - bug/**
-      - release/**
 
 permissions:
   # This is required for requesting the OIDC token
