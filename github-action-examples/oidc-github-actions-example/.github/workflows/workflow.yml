@@ -29,5 +29,5 @@ jobs:
           jf rt bce
           # Collect VCS details from git and add them to the build
           jf rt bag
-          # Publish build info
+          # Publish build info .
           jf rt bp
